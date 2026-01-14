@@ -141,3 +141,26 @@ color: #222222;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Styling for the search bar */
+.search-input {
+  border-radius: 25px !important;
+  padding: 0.5rem 1.5rem !important;
+  min-width: 250px; /* Ensures it doesn't get too small on laptops */
+}
+
+.search-btn {
+  border-radius: 25px !important;
+  padding: 0.5rem 1.2rem !important;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+  .search-input {
+    min-width: 100%; /* Full width on mobile to avoid overlap */
+    margin-bottom: 5px;
+  }
+  
+  .search-btn {
+    width: 100%; /* Full width button for easier clicking on phones */
+  }
+}
