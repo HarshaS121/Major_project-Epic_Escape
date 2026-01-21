@@ -275,3 +275,28 @@ color: #222222;
 .navbar {
     z-index: 1000;
 }
+/* Styling for Website Name next to Logo */
+.brand-text {
+    color: #fe424d; /* Matching your theme color */
+    font-weight: 600; /* Bold for a professional look */
+    font-size: 1.3rem; /* Adjust size as needed */
+    letter-spacing: -0.5px; /* Slight tightening for a modern feel */
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Using your body font */
+}
+
+/* Ensure brand doesn't lose color on hover */
+.navbar-brand:hover .brand-text {
+    color: #e33640; /* Slightly darker red on hover */
+}
+
+/* Vertical alignment fix */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+/* Fix for the Right Side Links alignment */
+.navbar-nav.ms-auto .nav-link {
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 0.5rem 1rem !important;
+}

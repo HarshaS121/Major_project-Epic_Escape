@@ -32,7 +32,8 @@
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <a class="navbar-brand d-flex align-items-center" href="/listings"><i class="fa-regular fa-compass"></i>
+    <span class="brand-text ms-2">Epic Escapes</span></a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
       <span class="navbar-toggler-icon"></span>
@@ -55,34 +56,13 @@
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Add your home</a>
         <% if(!currUser){ %>
-          <a class="nav-link" href="/signup">Signup</a>
-          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" href="/signup"><b>Signup</b></a>
+          <a class="nav-link" href="/login"><b>Login</b></a>
         <% } else { %>
-          <a class="nav-link" href="/logout">Logout</a>
+          <a class="nav-link" href="/logout"><b>Logout</b></a>
         <% } %>
       </div>
     </div>
   </div>
 </nav>
 
-<nav class="bottom-nav d-md-none">
-  <a href="/listings" class="bottom-nav-item active">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span>Explore</span>
-  </a>
-  <a href="/wishlists" class="bottom-nav-item">
-    <i class="fa-regular fa-heart"></i>
-    <span>Wishlists</span>
-  </a>
-  <% if(!currUser){ %>
-    <a href="/login" class="bottom-nav-item">
-      <i class="fa-regular fa-circle-user"></i>
-      <span>Log in</span>
-    </a>
-  <% } else { %>
-    <a href="/profile" class="bottom-nav-item">
-      <i class="fa-regular fa-circle-user"></i>
-      <span>Profile</span>
-    </a>
-  <% } %>
-</nav>
