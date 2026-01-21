@@ -1,21 +1,23 @@
 <style>
-  .btn-search{
-    background-color: #fe424d;
-    color: #fff;
-    border-radius: 25rem;
-    padding: 0 1rem 0 1rem;
+  /* Optimized Search Styling */
+  .search-btn {
+    background-color: #fe424d !important;
+    color: #fff !important;
+    border-radius: 25rem !important;
+    padding: 0.5rem 0.5rem;
+    border: none;
   }
-  .inp-search{
-      border-radius: 25rem;
-      padding: 0.2rem 2.7rem 0.2rem 2.7rem;
-      font-size: 0.9rem;
+  
+  .search-input {
+    border-radius: 25rem !important;
+    padding: 0.5rem 1.5rem !important;
+    font-size: 0.9rem;
+    min-width: 250px;
   }
-  .btn-search:hover{
-    background-color: #fe424d;
-    color: #fff;
-  }
-  .btn-search i{
-    display: inline;
+
+  .search-btn:hover {
+    background-color: #e33640 !important;
+    opacity: 0.9;
   }
 </style>
 
@@ -32,19 +34,20 @@
       <div class="navbar-nav">
         <a class="nav-link" href="/listings">Explore</a>
       </div>
-        <div class="navbar-nav  ms-auto">
-          <form class="d-flex flex-column flex-md-row gap-2 ms-auto" role="search">
-  <input 
-    class="form-control search-input" 
-    type="search" 
-    placeholder="Search destination" 
-    aria-label="Search"
-  >
-  <button class="btn btn-danger search-btn" type="submit">
-    <i class="fa-solid fa-magnifying-glass"></i> Search
-  </button>
-</form>
-        </div>
+        <div class="navbar-nav ms-auto">
+        <form class="d-flex" role="search" action="/listings" method="GET">
+          <input 
+            class="form-control search-input me-2" 
+            type="search" 
+            name="search" 
+            placeholder="Search destination" 
+            aria-label="Search"
+          >
+          <button class="btn search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i> 
+          </button>
+        </form>
+      </div>
        <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Add your home</a>
         <% if(!currUser){ %>
