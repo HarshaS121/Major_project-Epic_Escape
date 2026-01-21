@@ -1,4 +1,4 @@
-# 🏨 Epic Escapes - Full Stack Airbnb Clone
+# 🏨 Epic Escapes - A Full-Stack Social Platform for Travel Logs
 
 Epic Escapes is a comprehensive full-stack web application that allows users to browse unique property listings, create their own listings, and share reviews. This project focuses on implementing robust CRUD operations and secure user authentication.
 
