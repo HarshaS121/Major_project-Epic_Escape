@@ -22,7 +22,6 @@ module.exports.index = async (req, res) => {
     // Default logic
     allListings = await Listing.find({});
   }
-
   res.render("listings/index.ejs", { allListings });
 };
 
