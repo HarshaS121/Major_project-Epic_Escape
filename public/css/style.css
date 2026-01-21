@@ -164,3 +164,114 @@ color: #222222;
     width: 100%; /* Full width button for easier clicking on phones */
   }
 }
+
+/*Media queries
+/* ============================================================
+   1. DESKTOP ONLY STYLES (Screen size 768px and up)
+   ============================================================ */
+@media (min-width: 768px) {
+    /* Hide the mobile-specific search bar on desktop */
+    #mobile-search-container {
+        display: none !important;
+    }
+
+    /* Restore your original navbar height */
+    .navbar {
+        height: 5rem !important;
+    }
+
+    /* Hide the mobile bottom navigation */
+    .bottom-nav {
+        display: none !important;
+    }
+
+    /* Ensure categories/filters are always visible on desktop */
+    #filters {
+        display: flex !important;
+    }
+
+    /* Ensure desktop navbar links are in one line */
+    .navbar-nav {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+}
+
+/* ============================================================
+   2. MOBILE ONLY STYLES (Screen size below 768px)
+   ============================================================ */
+@media (max-width: 767px) {
+    /* Hide the desktop navbar brand and toggler like Airbnb */
+    .navbar-brand, .navbar-toggler {
+        display: none !important;
+    }
+
+    /* Hide desktop-only search and navbar content */
+    .collapse.navbar-collapse {
+        display: none !important;
+    }
+
+    /* Show the Airbnb-style mobile search bar */
+    #mobile-search-container {
+        display: flex !important;
+        padding: 10px 20px;
+        background: white;
+        border-bottom: 1px solid #eee;
+    }
+
+    #mobile-search-container form {
+        position: relative;
+        width: 100%;
+    }
+
+    #mobile-search-container .form-control {
+        border-radius: 25px !important;
+        height: 45px;
+        padding-right: 45px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        border: 1px solid #ddd !important;
+    }
+
+    /* Red magnifying glass inside mobile search bar */
+    .btn-search-mobile {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fe424d;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Final Desktop Layout Polish */
+@media (min-width: 768px) {
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    /* This stops the links from stacking vertically on desktop */
+    .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+/* Fix for the extra white space you see in the screenshot */
+.navbar {
+    z-index: 1000;
+}
