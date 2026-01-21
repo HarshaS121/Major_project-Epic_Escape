@@ -34,19 +34,20 @@
       <div class="navbar-nav">
         <a class="nav-link" href="/listings">Explore</a>
       </div>
-        <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search" action="/listings" method="GET">
-          <input 
-            class="form-control search-input me-2" 
-            type="search" 
-            name="search" 
-            placeholder="Search destination" 
-            aria-label="Search"
-          >
-          <button class="btn search-btn" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i> 
-          </button>
-        </form>
+        <div class="navbar-nav mx-auto">
+  <form class="d-flex" role="search" action="/listings" method="GET">
+    <input 
+      class="form-control search-input me-2" 
+      type="search" 
+      name="q" 
+      placeholder="Search destination" 
+      aria-label="Search"
+    >
+    <button class="btn search-btn" type="submit">
+      <i class="fa-solid fa-magnifying-glass"></i> 
+    </button>
+  </form>
+</div>
       </div>
        <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Add your home</a>
